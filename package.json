@@ -1,0 +1,27 @@
+{
+  "name": "react-native-animate-radio-button",
+  "version": "0.0.1",
+  "description": "Radio button component for React Native",
+  "main": "src/index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andcosta/react-native-animate-radio-button.git"
+  },
+  "keywords": ["react", "native", "react native", "react-native", "react-component", "radio", "group", "button", "animated"],
+  "author": {
+    "name": "Anderson de Carvalho",
+    "email": "andcosta.dev@gmail.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "react": "16.0.0-alpha.6",
+    "react-native": "0.44.0",
+    "prop-types": "^15.5.10"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*",
+    "prop-types": "*"
+  }
+}
