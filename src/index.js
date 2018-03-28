@@ -11,7 +11,8 @@ export default class Component extends React.PureComponent {
     labelColor: PropTypes.string,
     labelFontFamily: PropTypes.string,
     labelFontSize: PropTypes.number,
-    radioColor: PropTypes.string
+    radioColor: PropTypes.string,
+    onPress: PropTypes.func.isRequired
   };
 
   static defaultProps = {
@@ -23,7 +24,7 @@ export default class Component extends React.PureComponent {
     super(props);
 
     this.state = {
-      selected: this.props.selected
+      start: null
     };
 
     this.animationValue = {
@@ -38,10 +39,10 @@ export default class Component extends React.PureComponent {
 
   _renderRadioGroup(radio) {
     return (
-      <TouchableWithoutFeedback key={radio.id} onPress={() => this._onPress(radio.id)}>
+      <TouchableWithoutFeedback key={radio.id} onPress={() => this._onpressTeste(radio.id)}>
         <View style={styles.container}>
           <View style={[styles.viewRadio, { borderColor: this.props.radioColor }]}>
-            {this.state.selected === radio.id && (
+            {this.props.selected === radio.id && (
               <Animated.View
                 style={[
                   styles.viewAnimation,
@@ -64,11 +65,31 @@ export default class Component extends React.PureComponent {
     );
   }
 
+  _onpressTeste(id) {
+    this.props.onPress(id);
+  }
+
+  componentDidMount() {
+    this.animationValue.width.setValue(0);
+    this.animationValue.opacity.setValue(0);
+    this.setState({ start: 'xxxxx' });
+
+    Animated.timing(this.animationValue.opacity, {
+      toValue: 1,
+      duration: 600
+    }).start();
+
+    Animated.timing(this.animationValue.width, {
+      toValue: HEIGHT - 8,
+      duration: 200
+    }).start();
+  }
+
   _onPress(id) {
-    if (this.state.selected !== id) {
+    if (this.props.selected !== id) {
       this.animationValue.width.setValue(0);
       this.animationValue.opacity.setValue(0);
-      this.setState({ selected: id });
+      this.setState({ start: 'xxxxx' });
 
       Animated.timing(this.animationValue.opacity, {
         toValue: 1,
