@@ -1,12 +1,12 @@
 {
-  "name": "react-native-animate-radio-button",
+  "name": "react-native-radio-button-group",
   "version": "0.0.2",
   "description": "Radio button component for React Native",
   "main": "src/index.js",
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/andcosta/react-native-animate-radio-button.git"
+    "url": "https://github.com/andcosta/react-native-radio-button-group.git"
   },
   "keywords": ["react", "native", "react native", "react-native", "react-component", "radio", "group", "button", "animated"],
   "author": {
