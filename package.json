@@ -8,6 +8,7 @@
     "type": "git",
     "url": "https://github.com/andcosta/react-native-radio-button-group.git"
   },
+  "files": ["src"],
   "keywords": ["react", "native", "react native", "react-native", "react-component", "radio", "group", "button", "animated"],
   "author": {
     "name": "Anderson de Carvalho",
